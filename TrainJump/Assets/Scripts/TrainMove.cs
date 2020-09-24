@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class TrainMove : MonoBehaviour
 {
-    public bool gameStart = false;
+    //public bool gameStart = false;
 
     public Text startText;
 
@@ -26,17 +26,8 @@ public class TrainMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (gameStart == false)
-        {
-
-            if (Input.GetKeyDown("space")) {
-                startText.text = "";
-                gameStart = true;
-            }
-            
-        }
-        else
-        {
+        
+        
             if (health <= 0)
             {
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
@@ -46,7 +37,7 @@ public class TrainMove : MonoBehaviour
             {
                 player.AddForce(new Vector2(0, jumpHeight), ForceMode2D.Impulse);
             }
-        }
+        
        
 
        
